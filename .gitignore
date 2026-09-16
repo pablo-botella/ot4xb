@@ -20,6 +20,8 @@ v15
 /ot4xb/Release/
 /ot4xb/Debug/
 /ot4xb/out/
+/ot4xb/ot4xb.doc-tool.user
+/ot4xb/ot4xb.ot4xb-tool.user
 /ot4xb/Packages/
 /ot4xb/source/Debug/
 /ot4xb/source/Release/
@@ -28,3 +30,4 @@ v15
 /ot4xb/source/ot4xbCpp.def
 /ot4xb/source/ot4xb.exp
 /ot4xb/source/ot4xb.lib
+
