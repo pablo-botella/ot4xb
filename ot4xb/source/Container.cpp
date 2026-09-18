@@ -1028,11 +1028,8 @@ OT4XB_API LPSTR _pszParam_cb( XppParamList pl, ULONG n, DWORD * pcb )
    if( _partype( pl, n ) & XPP_CHARACTER )
    {
       cb = _parclen( pl, n );
-      if( cb )
-      {
-         p = (LPSTR) _xgrab( cb + 1 );
-         _parc( p, cb + 1, pl, n );
-      }
+      p = (LPSTR) _xgrab( cb + 1 );
+      _parc( p, cb + 1, pl, n );
    }
    if( pcb ){
       *pcb = cb;
@@ -4038,7 +4035,7 @@ XPPRET XPPENTRY OT4XB_MEMVAR_SETGET( XppParamList pl )
     Returns void }}*/
 LPSTR OT4XB_API _pszCaptionParam( XppParamList pl, ULONG n )
 {
-   ULONG nLen = _parclen( pl, n );
+   ULONG nLen = _parclen( pl, n ,0 );
    if( nLen != 0 )
    {
       LPSTR p = (LPSTR) _xgrab( nLen + 1 );
